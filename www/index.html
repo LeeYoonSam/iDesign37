@@ -3,30 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"> -->
   </head>
-
+  
   <body>
     <div>
-      <h1>Hello world</h1>
-      <p>P Test</p>
+      <div class="logo-title">idesign 37</div>
+      <div class="gallery-title">gallery</div>
+      <div>
+          <div class="bouncing-loader">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
       
-      <div class="bouncing-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+            <div class="grid-container">
+                
+                <script>
+                    for(i=1; i<= 16; i ++) {
+                      // item = "<div class='grid-item'><img src='../images/sample" + i + ".jpg'/></div>";
+
+                      item ="<div class='thumbnail-wrapper'>" +
+                              "<div class='thumbnail'>" + 
+                                "<div class='centered'>" +
+                                  "<img src='../images/sample" + i + ".jpg'/>" + 
+                                  "<div class='thumbnail-overlay'></div>" + 
+                                "</div>" + 
+                              "</div>" + 
+                            "</div>";
+
+                      document.write(item);
+                    }
+                </script>
+
+
+              <script>
+                $(".thumbnail-overlay").hover(
+                  function() {
+                    $( this ).addClass( "thumbnail-overlay--isHover" );
+                    $( ".centered" ).addClass( "img--isHover" );
+                  },
+                  function(){
+                    $( this ).removeClass( "thumbnail-overlay--isHover" );
+                    $( ".centered" ).removeClass( "img--isHover" );
+                  }
+                );
+              </script>
+            </div>
 
         
-      <div class="wrapper">
-          <div class="card box1">One</div>
-          <div class="card box2">Two</div>
-          <div class="card box3">Three</div>
-          <div class="card box4">Four</div>
-          <div class="card box5">Five</div>
-          <div class="card box6">Six</div>
+            
+            
+          </div>
       </div>
-    </div>
+      
+      
   </body>
 </html>

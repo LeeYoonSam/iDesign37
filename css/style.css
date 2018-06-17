@@ -1,3 +1,18 @@
+body {
+    background-color: black;
+}
+.logo-title {
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 7%;
+    padding-left: 5%;
+}
+.gallery-title {
+    float: right;
+    color: #ffffff;
+    font-size: 15rem;
+    opacity: .4;
+}
 .wrapper {
     /* 가로 정렬 */
     /* display: flex; */
@@ -8,3 +23,79 @@
     grid-template-rows: 100px 100px;
     grid-gap: 10px;
 }
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    text-align: center;
+}
+
+
+.thumbnail-wrappper { 
+    width: 33%; 
+} 
+.thumbnail { 
+    position: relative; 
+    padding-top: 50%; /* 1:1 ratio */ 
+    overflow: hidden;
+} 
+.thumbnail .centered { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    -webkit-transform: translate(50%,50%); 
+    -ms-transform: translate(50%,50%); 
+    transform: translate(50%,50%); 
+} 
+.thumbnail .centered img { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    max-width: 100%; 
+    height: auto; 
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);    
+    object-fit: cover;
+    transition: 0.3s transform ease-out, 0.1s opacity ease-out;
+}
+.thumbnail .centered img:hover { 
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    transition: 0.2s opacity ease-out;
+}
+.thumbnail img--isHover { 
+    transition: 0.3s transform ease-out, 0.1s opacity ease-out;
+}
+
+.thumbnail-overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);        
+    z-index: 2;
+    background: #000;
+    opacity: .4;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transition: 0.2s opacity ease-out;
+}
+.thumbnail-overlay:hover {
+    opacity: 0;
+    transition: 0.2s opacity ease-out;
+}
+
+.thumbnail-overlay--isHover .thumbnail .centered img {
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+}
+
+
+
