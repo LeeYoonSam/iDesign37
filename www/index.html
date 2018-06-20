@@ -1,65 +1,181 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My CSS experiment</title>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="../css/test.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"> -->
-  </head>
-  
-  <body>
-    <div>
-      <div class="logo-title">idesign 37</div>
-      <div class="gallery-title">gallery</div>
-      <div>
-          <div class="bouncing-loader">
+
+<head>
+  <meta charset="utf-8">
+  <title>My CSS experiment</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="../css/test.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"> -->
+</head>
+
+<body>
+  <div>
+    <div class="logo-title">idesign 37</div>
+    <div class="gallery-title">gallery</div>
+    <div class="grid_container">
+      <!-- <div class="bouncing-loader">
               <div></div>
               <div></div>
               <div></div>
-            </div>
-      
-            <div class="grid-container">
-                
-                <script>
-                    for(i=1; i<= 16; i ++) {
-                      // item = "<div class='grid-item'><img src='../images/sample" + i + ".jpg'/></div>";
+            </div> -->
 
-                      item ="<div class='thumbnail-wrapper'>" +
-                              "<div class='thumbnail'>" + 
-                                "<div class='centered'>" +
-                                  "<img src='../images/sample" + i + ".jpg'/>" + 
-                                  "<div class='thumbnail-overlay'></div>" + 
-                                "</div>" + 
-                              "</div>" + 
-                            "</div>";
+          <ul id="rig">
+              <li>
+                  <a class="rig-cell" href="#">
+                      <img class="rig-img" src="../images/sample1.jpg" />
+                      <span class="rig-overlay"></span>
+                      <span class="rig-text">Product Title</span>
+                  </a>
+              </li>
+              <li>
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" src="../images/sample2.jpg" />
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Product Title</span>
+                </a>
+              </li>
+              <li>
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" src="../images/sample3.jpg" />
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Product Title</span>
+                </a>
+              </li>
+              <li>
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" src="../images/sample4.jpg" />
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Product Title</span>
+                </a>
+              </li>
 
-                      document.write(item);
-                    }
-                </script>
+              <li>
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" src="../images/sample5.jpg" />
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Product Title</span>
+                </a>
+            </li>
+            <li>
+              <a class="rig-cell" href="#">
+                  <img class="rig-img" src="../images/sample6.jpg" />
+                  <span class="rig-overlay"></span>
+                  <span class="rig-text">Product Title</span>
+              </a>
+            </li>
+            <li>
+              <a class="rig-cell" href="#">
+                  <img class="rig-img" src="../images/sample7.jpg" />
+                  <span class="rig-overlay"></span>
+                  <span class="rig-text">Product Title</span>
+              </a>
+            </li>
+            <li>
+              <a class="rig-cell" href="#">
+                  <img class="rig-img" src="../images/sample8.jpg" />
+                  <span class="rig-overlay"></span>
+                  <span class="rig-text">Product Title</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="rig-cell" href="#">
+                  <img class="rig-img" src="../images/sample9.jpg" />
+                  <span class="rig-overlay"></span>
+                  <span class="rig-text">Product Title</span>
+              </a>
+          </li>
+          <li>
+            <a class="rig-cell" href="#">
+                <img class="rig-img" src="../images/sample10.jpg" />
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Product Title</span>
+            </a>
+          </li>
+          <li>
+            <a class="rig-cell" href="#">
+                <img class="rig-img" src="../images/sample11.jpg" />
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Product Title</span>
+            </a>
+          </li>
+          <li>
+            <a class="rig-cell" href="#">
+                <img class="rig-img" src="../images/sample12.jpg" />
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Product Title</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="rig-cell" href="#">
+                <img class="rig-img" src="../images/sample13.jpg" />
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Product Title</span>
+            </a>
+        </li>
+        <li>
+          <a class="rig-cell" href="#">
+              <img class="rig-img" src="../images/sample14.jpg" />
+              <span class="rig-overlay"></span>
+              <span class="rig-text">Product Title</span>
+          </a>
+        </li>
+        <li>
+          <a class="rig-cell" href="#">
+              <img class="rig-img" src="../images/sample15.jpg" />
+              <span class="rig-overlay"></span>
+              <span class="rig-text">Product Title</span>
+          </a>
+        </li>
+        <li>
+          <a class="rig-cell" href="#">
+              <img class="rig-img" src="../images/sample16.jpg" />
+              <span class="rig-overlay"></span>
+              <span class="rig-text">Product Title</span>
+          </a>
+        </li>
+      </ul>
 
 
-              <script>
+      <!-- <ul id="rig">
+
+        <script>
+          for (i = 1; i <= 16; i++) {
+
+            item = "<li><a class='rig_cell' href='#'>" +
+              "<img class='rig-img' src='../images/sample" + i + ".jpg'/>" +
+              "<span class='rig-overlay'></span>" +
+              "<span class='rig-text'>Product Title</span>"
+
+            "</a></li>";
+
+            document.write(item);
+          }
+        </script>
+      </ul> -->
+
+      <!-- <script>
                 $(".thumbnail-overlay").hover(
                   function() {
+                    $(".centered img").css({"transform":"scale(1, 1)"});
+                    
                     $( this ).addClass( "thumbnail-overlay--isHover" );
                     $( ".centered" ).addClass( "img--isHover" );
                   },
                   function(){
+                    $(".centered img").css({"transform":"scale(0.9, 0.9)"});
+
                     $( this ).removeClass( "thumbnail-overlay--isHover" );
                     $( ".centered" ).removeClass( "img--isHover" );
                   }
                 );
-              </script>
-            </div>
+              </script> -->
+  </div>
 
-        
-            
-            
-          </div>
-      </div>
-      
-      
-  </body>
+
+</body>
+
 </html>
